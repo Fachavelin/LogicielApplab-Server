@@ -4,6 +4,7 @@ const {
   obtenerDatosBody,
   obtenerDatosHero,
   obtenerImagenesHero,
+  obtenerDatosFooter,
 } = require('../controllers/webpage');
 
 const router = new Router();
@@ -14,6 +15,6 @@ router.get('/imagenes-hero', obtenerImagenesHero);
 
 router.get('/datos-body', obtenerDatosBody);
 
-route.get('/datos-body');
+router.get('/datos-footer', obtenerDatosFooter);
 
 module.exports = router;

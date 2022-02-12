@@ -23,10 +23,15 @@ const obtenerDatosBody = async (req, res) => {
   return res.json(datosBody);
 };
 
-const obtenerDatosHero = async (req, res) => {
+const obtenerDatosFooter = async (req, res) => {
   const datosFooter = await DatosFooter.find();
 
   return res.json(datosFooter);
 };
 
-module.exports = { obtenerImagenesHero, obtenerDatosHero, obtenerDatosBody };
+module.exports = {
+  obtenerImagenesHero,
+  obtenerDatosHero,
+  obtenerDatosBody,
+  obtenerDatosFooter,
+};

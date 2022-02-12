@@ -1,6 +1,10 @@
 const { Schema, model } = require('mongoose');
 
 const datosFooterSchema = Schema({
+  nombre: {
+    type: String,
+    required: true,
+  },
   enlace: {
     type: String,
     required: true,
