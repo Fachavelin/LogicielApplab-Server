@@ -3,8 +3,8 @@ const {
   DatosBody,
   ImagenesHero,
   DatosFooter,
-} = require('../models/index');
-
+} = require("../models/index");
+/* 
 const obtenerImagenesHero = async (req, res) => {
   const imagenesHero = await ImagenesHero.find();
 
@@ -34,4 +34,22 @@ module.exports = {
   obtenerDatosHero,
   obtenerDatosBody,
   obtenerDatosFooter,
+};
+ */
+
+const obtenerDatosIndex = async (req, res) => {
+  const imagenesHero = await ImagenesHero.find();
+  const { titulo, cuerpo } = await DatosHero.findOne();
+  const datosBody = await DatosBody.find();
+
+  return res.json({
+    titulo,
+    cuerpo,
+    imagenesHero,
+    datosBody,
+  });
+};
+
+module.exports = {
+  obtenerDatosIndex,
 };
